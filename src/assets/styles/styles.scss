@@ -8,4 +8,59 @@
 
 body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.main {
+    min-height: 90vh
+}
+
+header {
+    background: black
+}
+
+.header-logo {
+    width: 50vw;
+    min-height: 10vh;
+    margin: 3px
+}
+
+.guia {
+    background: #E5E7E9;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 7vh;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center
+}
+
+.btn-opciones {
+    width: 100%
+}
+
+footer.footer {
+    background: #040008;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.copyright {
+    color: #303030;
+}
+
+.footerstf {
+    color: #fff
+}
+
+.footerstf:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icongrid {
+    color: #fff;
 }
