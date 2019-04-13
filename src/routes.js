@@ -5,6 +5,7 @@ const resources = require('./routes/resources');
 const contact = require('./routes/contact');
 const users = require('./routes/users');
 const session = require('./routes/session');
+const probador = require('./routes/probador');
 const map = require('./routes/map');
 const router = new KoaRouter();
 
