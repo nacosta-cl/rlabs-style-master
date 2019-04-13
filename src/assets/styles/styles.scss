@@ -11,12 +11,17 @@ body {
     min-height: 100vh;
 }
 
+.main {
+    min-height: 90vh
+}
+
 header {
     background: black
 }
 
 .header-logo {
-    width: 50%;
+    width: 50vw;
+    min-height: 10vh;
     margin: 3px
 }
 
@@ -26,29 +31,36 @@ header {
     border-radius: 20px;
     box-sizing: border-box;
     margin-bottom: 7vh;
-  }
+}
 
-  footer.footer {
+.flex-center {
+    display: flex;
+    align-items: center
+}
+
+.btn-opciones {
+    width: 100%
+}
+
+footer.footer {
     background: #040008;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    position: absolute;
-    bottom: 0
-  }
-  
-  .copyright {
+}
+
+.copyright {
     color: #303030;
-  }
-  
-  .footerstf {
+}
+
+.footerstf {
     color: #fff
-  }
-  
-  .footerstf:hover {
+}
+
+.footerstf:hover {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .icongrid {
+}
+
+.icongrid {
     color: #fff;
-  }
+}
