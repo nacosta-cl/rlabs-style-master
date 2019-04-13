@@ -33,13 +33,28 @@ header {
     margin-bottom: 7vh;
 }
 
+.opciones {
+    height: 100%;
+}
+
 .flex-center {
     display: flex;
-    align-items: center
+    align-items: center;
+    justify-content: center
+}
+
+.center-item {
+    margin:auto
 }
 
 .btn-opciones {
-    width: 100%
+    padding: 10px;
+    width: 100%;
+    font-size: 20px
+}
+
+.opcion {
+    padding: 20px
 }
 
 footer.footer {
