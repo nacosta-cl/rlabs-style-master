@@ -10,6 +10,8 @@ const router = new KoaRouter();
 
 router.use('/', index.routes());
 router.use('/resources', resources.routes());
+router.use('/map', map.routes());
+router.use('/probador', probador.routes());
 router.use('/contact', contact.routes());
 router.use('/users', users.routes());
 router.use('/session', session.routes());
