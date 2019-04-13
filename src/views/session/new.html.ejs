@@ -1,0 +1,33 @@
+<div class="tex-center ">
+  <br>
+  <div id="log-in" class="col-lg-5 col-md-8 col-12 guia">
+<h2 class="text-center">Iniciar sesión</h2><br>
+<% if (locals.error) { %>
+  <div class="error">
+    <%= error %>
+  </div>
+<% } %>
+  <div id="container ">
+    <form  action="<%= createSessionPath %>" method="post">
+        <input type="hidden" name="_method" value="put" />
+      <div class="row form-group">
+        <label for="username" class="col-sm-3 col-form-label">Usuario:</label>
+        <input type="username" name="username" placeholder="Usuario" class="form-control" value="<%= locals.email %>" />
+      </div>
+      <div class="row form-group">
+        <label for="password" class="col-sm-3 col-form-label">Contraseña:</label>
+        <input type="password" name="password" placeholder="Contraseña" class="form-control" value="<%= locals.password %>" />
+        </div>
+      </div>
+      <br>
+      <div class="form-group row text-center">
+        <div class="col-sm-12">
+          <button id="login" type="submit" name="sign-in" class="btn btn-primary">Iniciar sesión</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

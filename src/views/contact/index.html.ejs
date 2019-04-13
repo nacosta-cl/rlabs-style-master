@@ -1,0 +1,159 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/assets/img/nav_white.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/activities/hacemos">Hacemos</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/activities/ensenamos">Enseñamos</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/activities/aprende">Aprende</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/members">Miembros</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/contact">Contacto<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="main">
+    <section class="formulario">
+        <h1>Formulario de Contacto</h1><br>
+        <form method="POST" action="<%=sendContactPath%>" class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">Nombre:</label>
+                    <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="Escriba su nombre aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Apellidos:</label>
+                    <input name="lastname" type="text" class="form-control" id="validationCustom02" placeholder="Escriba sus apellidos aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">E-mail:</label>
+                    <input name="email" type="email" class="form-control" id="validationCustom03" placeholder="Escriba su email aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom04">Teléfono:</label>
+                    <input name="phone" type="text" class="form-control" id="validationCustom04" placeholder="Escriba su teléfono aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom05">País:</label>
+                    <input name="country" type="text" class="form-control" id="validationCustom05" placeholder="Escriba su país aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom06">Ciudad:</label>
+                    <input name="city" type="text" class="form-control" id="validationCustom06" placeholder="Escriba su ciudad aquí..." required>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="select1">Tipo de Consulta:</label>
+                    <select name="topic" id="select1" class="form-control" required>
+                                                <option value="" selected disabled hidden>-- Tipo de Consulta --</option>
+                                                <option value="1">Consulta</option>
+                                                <option value="2">Obtener Aprato</option>
+                                                <option value="3">Otro</option>
+                                        </select>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="message" class="form-control" required></textarea>
+                    <div class="valid-feedback">
+                        Completado!
+                    </div>
+                    <div class="invalid-feedback">
+                        Complete este campo.
+                    </div>
+                </div>
+            </div>
+            <button id="submit-btn" class="btn btn-primary" type="submit">Enviar Formulario</button>
+        </form>
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </section>
+</section>
