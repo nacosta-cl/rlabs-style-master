@@ -1,6 +1,48 @@
+<!DOCTYPE HTML>
+<html>
 <header>
-    head
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </header>
 <section class="main container">
-    content
+
+    <body class="is-preload">
+        <div id="wrapper">
+            <section id="main">
+                <header>
+                    <span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+                    <h1>Próximamente</h1>
+                    <p>StyleMaster Ripley's SmartFitting Room</p>
+                </header>
+
+                <footer>
+                    <ul class="icons">
+                        <li><a href="#" class="fa-instagram">Instagram</a></li>
+                        <li><a href="#" class="fa-facebook">Facebook</a></li>
+                    </ul>
+                </footer>
+            </section>
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>&copy; Elunet Labs</li>
+                    <li>Website: <a href="http://elunet.tech">elunet.tech/</a></li>
+                </ul>
+            </footer>
+
+        </div>
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function () {
+                    document.body.className = document.body.className.replace(/\bis-preload\b/, '');
+                });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            }
+        </script>
+
+    </body>
+
+</html>
 </section>
