@@ -1,14 +1,17 @@
+<section class="guia">
 <h2 class="text-center">
     Seleccione tienda en la que se encuentra:
-</h2><br>
+</h2><br><br>
 <form action="/map/mapGet" method="GET">
     <input id="buscador" type='text' placeholder='Tiendas Ripley' class='flexdatalist form-control' data-min-length='1'
         list='succs' name='suc'>
+
     <datalist id="succs" class="buscador">
         <% succs.forEach((suc) => {%>
         <option value="<%=suc.id%>"><%=suc.name%></option>
         <%});%>
     </datalist>
-    <input type="submit"/>
-    <button id="btnbuscador" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+    <button id="btnbuscador" type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
 </form>
+</section>

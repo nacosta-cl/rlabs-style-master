@@ -3,30 +3,33 @@
     <%if(prod.name!==undefined){%>
 
     <section class="main_user text-center container">
-        <a href="">
-            <div class="ligh-div flex-center">
-                <i class="far fa-lightbulb"></i>
-            </div>
-        </a><br>
-
-        Has seleccionado el producto<br>
-        <%=prod.name %> <br>
         <div hidden>$<%=prod.prices.listPrice%></div> <br>
         <div hidden>SKU <%=actSKU%></div>
+        <h4>Has seleccionado el producto<br>
+        <%=prod.name %></h4>
 
         <div class="outfit row flex-center">
-            <div class="col-10">
-                <img src="https:<%=prod.fullImage%>" />
+            <div class="col-9">
+                <img src="https:<%=prod.fullImage%>" class="img-fluid" />
             </div>
-            <div class="col-2 checklist">
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i>
+            <div class="col-3 checklist">
+                <img src="/assets/img/tshirt.svg"> <i id="shirt" class="far fa-square"></i><br><br>
+                <img src="/assets/img/shorts.svg"> <i id="shorts" class="far fa-square"></i><br><br>
+                <img src="/assets/img/shoe.svg"> <i id="shoe" class="far fa-square"></i><br><br>
+                <img src="/assets/img/watch.svg"> <i id="watch" class="far fa-square"></i>
             </div>
         </div>
-        <br> <br>
-        <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
+        <br> <br><a href="">
+            <div class="flex-center">
+
+                <img src="/assets/img/luz.png" alt="bulb" class="light">
+                <div id="light-text">
+                    Puedes cambiar la iluminación de tu habitación
+                </div>
+            </div>
+        </a><br><br>
+        
+        <a href="/probador/<%=actID%>/end"><button id="finish" class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
 
         <%} else {%>

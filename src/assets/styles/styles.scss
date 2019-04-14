@@ -37,7 +37,6 @@ header {
 }
 
 .guia {
-    background: #E5E7E9;
     padding: 20px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -87,23 +86,33 @@ header {
 }
 
 .checklist {
-    font-size: 4.7vw
+    font-size: 4.5vw;
+    justify-content: center;
+    img, path {
+        width: 50%
+    }
 }
 
-.ligh-div {
-    background: #FFAA00;
-    color: white;
-    justify-content: center;
-    font-size: 8vh;
-    height: 12vh;
-    width: 12vh;
-    border-radius: 9px;
-    position: absolute;
-    right: 5vw;
+.light {
+    height: 14vh;
+    width: 14vh;
+}
+
+#light-text {
+    display: inline-block;
+    text-align: left;
+    margin-left: 2vw;
+    max-width: 50%;
+    font-size: 25px
+}
+
+#finish {
+    width: 40%;
+    font-size: 30px
 }
 
 .outfit {
-    margin-top: 13vh;
+    margin-top: 2vh;
 }
 
 .clothes-showcase {
@@ -130,11 +139,23 @@ header {
     }
 }
 
+.arrow {
+    font-size: 30px;
+    float: right
+}
+
+#arrow1 {
+    color: #49247A
+}
+
+#arrow2 {
+    color: #C2000A
+}
 
 .U,
 .D {
     width: 96%;
-    font-size: 20px
+    font-size: 30px
 }
 
 .U {
@@ -145,6 +166,33 @@ header {
 .D {
     position: absolute;
     bottom: 0
+}
+
+.qrscanner video{
+   
+    min-width: 45vw;
+    width: 45vh;
+    height: auto;
+}
+
+#scannedTextMemo {
+    min-width: 40vw;
+    width: 40vh
+}
+
+#buscador-flexdatalist {
+    width: 80%;
+    display: inline-block;
+    float: left;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0
+}
+
+#btnbuscador {
+    width: 20%;
+    display: inline-block;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
 }
 
 footer.footer {

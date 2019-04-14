@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>Mapas de la tienda por nivel</p>
 <br>
 <p>Los probadores están marcados con letras en rojo y bajo cada piso se muestra su disponibilidad</p>
@@ -14,3 +15,68 @@
 <br>
 <img style="height: 100%; width:500px" src="/assets/img/map2.jpg">
 <br>
+=======
+<section>
+    <div class="container">
+        <h3 class="text-center">Mapas de la tienda por nivel </h3>
+        <br>
+        <p>Los probadores están marcados con letras en rojo y bajo cada piso se muestra su disponibilidad</p>
+        <br>
+        <h4 id="show1">Piso 3 <span class="arrow"> <i id="arrow1" class="fas fa-angle-down"></i></span></h4>
+        <hr>
+        <div class="members1">
+            <img class="img-fluid" src="/assets/img/map1.jpg">
+            <br>
+            <p><b>A:</b> <%=res[0].available%></p>
+            <p><b>B:</b> <%=res[0].available%></p>
+            <p><b>C:</b> <%=res[0].available%></p>
+        </div>
+        <br><br>
+        <h4 id="show2">Piso 4 <span class="arrow"> <i id="arrow2" class="fas fa-angle-down"></i></span></h4>
+        <hr>
+        <div class="members2">
+            <img class="img-fluid" src="/assets/img/map2.jpg">
+        </div>
+        <br>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#show1').click(function () {
+            if ($(".members1").hasClass("presente")) {
+                $('.members1').slideUp("slow");
+                $(".members1").removeClass("presente");
+                $("#arrow1").removeClass("fa-angle-up");
+                $("#arrow1").addClass("fa-angle-down");
+            } else {
+                $('.members1').slideDown("slow");
+                $(".members1").addClass("presente");
+                $("#arrow1").removeClass("fa-angle-down");
+                $("#arrow1").addClass("fa-angle-up");
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#show2').click(function () {
+            if ($(".members2").hasClass("presente")) {
+                $('.members2').slideUp("slow");
+                $(".members2").removeClass("presente");
+                $("#arrow2").removeClass("fa-angle-up");
+                $("#arrow2").addClass("fa-angle-down");
+            } else {
+                $('.members2').slideDown("slow");
+                $(".members2").addClass("presente");
+                $("#arrow2").removeClass("fa-angle-down");
+                $("#arrow2").addClass("fa-angle-up");
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $(".members1").hide();
+        $(".members2").hide();
+    });
+</script>
+>>>>>>> b939f6ae73a5cbf2b47cf1cbb2811aa82557ff47
