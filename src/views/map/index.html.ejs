@@ -1,3 +1,32 @@
-Seleccione tienda por favor
-
+<h2 class="text-center">
+    Seleccione tienda en la que se encuentra:
+</h2><br>
+<form>
+    <input id="buscador" type='text' placeholder='Tiendas Ripley' class='flexdatalist form-control' data-min-length='1'
+        list='restaurantes' name='restaurant'>
+    <datalist id="restaurantes" class="buscador">
+        <% availableRestaurants.forEach((restaurant) => {%>
+        <option value="<%=restaurant%>"><%=restaurant%></option>
+        <%});%>
+    </datalist>
+    <button id="btnbuscador" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+</form>
+<br>
+<!--
+Huerfanos
+Crillon
+Mall del Centro
+Mall Plaza Alameda
+Mall Plaza Maipú
+Mall Plaza Oeste
+Mall Plaza Vespucio
+Mall Florida center
+Mall Parque Arauco
+Los Dominicos
+Mall Alto Las Condes
+Mall Plaza Norte
+Mall Parque Tobalaba
+Mall Costanera Center
+Mall Plaza Sur
+Mall Plaza Egaña -->
 <a href="/map/parque-arauco">Parque Arauco</a>
