@@ -1,11 +1,17 @@
-<<<<<<< HEAD
 <section class="main_user text-center container">
 
 
-    <a href="/">
-    <div class="ligh-div flex-center">
-        <i class="far fa-lightbulb"></i>
-    </div></a><br>
+    <a href="">
+        <div class="ligh-div flex-center">
+            <i class="far fa-lightbulb"></i>
+        </div>
+    </a><br>
+    Has seleccionado el producto<br>
+    <%=prod %>
+    <%=prod.name %>
+    <%=prod.prices.listPrice%>
+    <%=prod.prices.offerPrice%>
+    Se intento el SKU <%=actSKU%>
     <div class="outfit row flex-center">
         <div class="col-10">
             <img src="/assets/img/polera1.jpg" class="item">
@@ -20,16 +26,3 @@
     <br> <br>
     <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 </section>
-=======
-Has seleccionado el producto<br>
-<%=prod %>
-<%=prod.name %>
-<%=prod.prices.listPrice%>
-<%=prod.prices.offerPrice%>
-Se intento el SKU <%=actSKU%>
-
-Ambiente
-
-Aqui puedo generar los qr necesarios
-<a href="/probador/<%=actID%>/end">finalizar</a>
->>>>>>> e1407565ac1f6dd40da37fe151a6e9c21c8f067b
