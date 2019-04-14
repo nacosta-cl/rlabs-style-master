@@ -11,28 +11,25 @@
         Se intento el SKU <%=actSKU%>
 
         <div class="outfit row flex-center">
-            <div class="col-10">
+            <div class="col-9">
                 <img src="https:<%=prod.fullImage%>" class="img-fluid" />
             </div>
-            <div class="col-2 checklist">
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i><br><br>
-                <i class="far fa-square"></i>
+            <div class="col-3 checklist">
+                <img src="/assets/img/tshirt.svg"> <i id="shirt" class="far fa-square"></i><br><br>
+                <img src="/assets/img/shorts.svg"> <i id="shorts" class="far fa-square"></i><br><br>
+                <img src="/assets/img/shoe.svg"> <i id="shoe" class="far fa-square"></i><br><br>
+                <img src="/assets/img/watch.svg"> <i id="watch" class="far fa-square"></i>
             </div>
         </div>
-        <br> <br>
-        <div>
-            <a href="">
-                <div class="ligh-div flex-center">
-                    <i class="far fa-lightbulb"></i>
-                </div>
-            </a>
+        <br> <br><a href="">
+            <div class="flex-center">
 
-            <div id="light-text">
-                Puedes cambiar la iluminación <br> de tu habitación
+                <img src="/assets/img/luz.png" alt="bulb" class="light">
+                <div id="light-text">
+                    Puedes cambiar la iluminación de tu habitación
+                </div>
             </div>
-        </div><br>
+        </a><br>
         <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
 
