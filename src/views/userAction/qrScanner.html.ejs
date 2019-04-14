@@ -1,49 +1,3 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>QR Scanner</title>
-
-    <style>
-        .qrscanner video {
-            max-width: 95%;
-            max-height: 75%;
-        }
-
-        .row-element-set {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .row-element {
-            padding: .2em 0em;
-        }
-
-        .row-element-set-QRScanner {
-            max-width: 30em;
-            display: flex;
-            flex-direction: column;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-        }
-
-        .form-field-caption {
-            font-weight: bold;
-        }
-
-        .form-field-input {
-            width: 100%;
-        }
-    </style>
-</head>
-
-<body>
     <div class="row-element-set row-element-set-QRScanner">
         <div class="qrscanner" id="scanner">
         </div>
@@ -126,7 +80,4 @@
             }
         }
     </script>
-</body>
-<script type="text/javascript" src="/assets/vendor/qr.js"></script>
-
-</html>
+    <script type="text/javascript" src="/assets/vendor/qr.js"></script>
