@@ -11,7 +11,8 @@ body {
     min-height: 100vh;
 }
 
-a, a:hover {
+a,
+a:hover {
     color: inherit;
     text-decoration: none
 }
@@ -19,6 +20,10 @@ a, a:hover {
 .main {
     min-height: 90vh;
     padding: 2vh 0 5vh 0
+}
+
+.main2 {
+    height: 100vh;
 }
 
 header {
@@ -74,7 +79,7 @@ header {
 
 #sku {
     position: absolute;
-    top:-100000000000000000000000000000000000px
+    top: -100000000000000000000000000000000000px
 }
 
 .item {
@@ -101,6 +106,28 @@ header {
     margin-top: 13vh;
 }
 
+.clothes-showcase .b {
+    height: 50vh;
+    padding: 0 5px;
+}
+
+
+.U,
+.D {
+    width: 96%;
+    font-size: 20px
+}
+
+.U {
+    position: absolute;
+    top: 0
+}
+
+.D {
+    position: absolute;
+    bottom: 0
+}
+
 footer.footer {
     background: #040008;
     padding-top: 2rem;
@@ -124,51 +151,51 @@ footer.footer {
     color: #fff;
 }
 
-.btn-yellow { 
-    color: #ffffff; 
-    background-color: #FFAA00; 
-    border-color: #FFAA00; 
-  } 
-   
-  .btn-yellow:hover, 
-  .btn-yellow:focus, 
-  .btn-yellow:active, 
-  .btn-yellow.active, 
-  .open .dropdown-toggle.btn-yellow { 
-    color: #ffffff; 
-    background-color: #E89300; 
-    border-color: #FFAA00; 
-  } 
-   
-  .btn-yellow:active, 
-  .btn-yellow.active, 
-  .open .dropdown-toggle.btn-yellow { 
-    background-image: none; 
-  } 
-   
-  .btn-yellow.disabled, 
-  .btn-yellow[disabled], 
-  fieldset[disabled] .btn-yellow, 
-  .btn-yellow.disabled:hover, 
-  .btn-yellow[disabled]:hover, 
-  fieldset[disabled] .btn-yellow:hover, 
-  .btn-yellow.disabled:focus, 
-  .btn-yellow[disabled]:focus, 
-  fieldset[disabled] .btn-yellow:focus, 
-  .btn-yellow.disabled:active, 
-  .btn-yellow[disabled]:active, 
-  fieldset[disabled] .btn-yellow:active, 
-  .btn-yellow.disabled.active, 
-  .btn-yellow[disabled].active, 
-  fieldset[disabled] .btn-yellow.active { 
-    background-color: #FFAA00; 
-    border-color: #FFAA00; 
-  } 
-   
-  .btn-yellow .badge { 
-    color: #FFAA00; 
-    background-color: #ffffff; 
-  }
+.btn-yellow {
+    color: #ffffff;
+    background-color: #FFAA00;
+    border-color: #FFAA00;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active,
+.btn-yellow.active,
+.open .dropdown-toggle.btn-yellow {
+    color: #ffffff;
+    background-color: #E89300;
+    border-color: #FFAA00;
+}
+
+.btn-yellow:active,
+.btn-yellow.active,
+.open .dropdown-toggle.btn-yellow {
+    background-image: none;
+}
+
+.btn-yellow.disabled,
+.btn-yellow[disabled],
+fieldset[disabled] .btn-yellow,
+.btn-yellow.disabled:hover,
+.btn-yellow[disabled]:hover,
+fieldset[disabled] .btn-yellow:hover,
+.btn-yellow.disabled:focus,
+.btn-yellow[disabled]:focus,
+fieldset[disabled] .btn-yellow:focus,
+.btn-yellow.disabled:active,
+.btn-yellow[disabled]:active,
+fieldset[disabled] .btn-yellow:active,
+.btn-yellow.disabled.active,
+.btn-yellow[disabled].active,
+fieldset[disabled] .btn-yellow.active {
+    background-color: #FFAA00;
+    border-color: #FFAA00;
+}
+
+.btn-yellow .badge {
+    color: #FFAA00;
+    background-color: #ffffff;
+}
 
 
 .btn-purple {
@@ -261,4 +288,50 @@ fieldset[disabled] .btn-wine.active {
 .btn-wine .badge {
     color: #DB212A;
     background-color: #ffffff;
+}
+
+.btn-grey {
+    color: #ABABAB;
+    background-color: #ABABAB;
+    border-color: #ABABAB;
+}
+
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey:active,
+.btn-grey.active,
+.open .dropdown-toggle.btn-grey {
+    color: #ABABAB;
+    background-color: #ABABAB;
+    border-color: #ABABAB;
+}
+
+.btn-grey:active,
+.btn-grey.active,
+.open .dropdown-toggle.btn-grey {
+    background-image: none;
+}
+
+.btn-grey.disabled,
+.btn-grey[disabled],
+fieldset[disabled] .btn-grey,
+.btn-grey.disabled:hover,
+.btn-grey[disabled]:hover,
+fieldset[disabled] .btn-grey:hover,
+.btn-grey.disabled:focus,
+.btn-grey[disabled]:focus,
+fieldset[disabled] .btn-grey:focus,
+.btn-grey.disabled:active,
+.btn-grey[disabled]:active,
+fieldset[disabled] .btn-grey:active,
+.btn-grey.disabled.active,
+.btn-grey[disabled].active,
+fieldset[disabled] .btn-grey.active {
+    background-color: #ABABAB;
+    border-color: #ABABAB;
+}
+
+.btn-grey .badge {
+    color: #ABABAB;
+    background-color: #ABABAB;
 }

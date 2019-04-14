@@ -1,21 +1,9 @@
-<div>
-
-
-
-</div>
-
-
-
-
-
-
-
 <script>
     const refreshTime = 100000;
-    const mainFunc = function(){
+    const mainFunc = function () {
         var xmlhttp = new XMLHttpRequest();
-        var url = "/api/set?pr=" + <%=actID%> ;
-        xmlhttp.onreadystatechange = function() {
+        var url = "/api/set?pr=" + <%=actID%>;
+        xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var myArr = JSON.parse(this.responseText);
                 myFunction(myArr);
@@ -25,17 +13,38 @@
         xmlhttp.send();
     }
     setInterval(mainFunc, refreshTime)
-
-
-
-
-
 </script>
-
-
-
-Seleccionador de prendas que combinen dado un SKU: Multiples opciones pre sugeridas por un diseñador
-IA
-
-requests http para pedir más prendas
-requests para que las prendas se guarden en un SET escogido
+<section class="flex-center main2">
+    <div class="container">
+        <div class="row clothes-showcase">
+            <div class="col-3 text-center flex-center b">
+                <button class="btn btn-grey U"><b>.</b></button>
+                <div>
+                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                </div>
+                <button class="btn btn-grey D"><b>.</b></button>
+            </div>
+            <div class="col-3 text-center flex-center b">
+                <button class="btn btn-purple U"><b><i class="fas fa-chevron-up"></i></b></button>
+                <div>
+                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                </div>
+                <button class="btn btn-purple D"><b><i class="fas fa-chevron-down"></i></b></button>
+            </div>
+            <div class="col-3 text-center flex-center b">
+                <button class="btn btn-wine U"><b><i class="fas fa-chevron-up"></i></b></button>
+                <div>
+                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                </div>
+                <button class="btn btn-wine D"><b><i class="fas fa-chevron-down"></i></b></button>
+            </div>
+            <div class="col-3 text-center flex-center b">
+                <button class="btn btn-yellow U"><b><i class="fas fa-chevron-up"></i></b></button>
+                <div>
+                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                </div>
+                <button class="btn btn-yellow D"><b><i class="fas fa-chevron-down"></i></b></button>
+            </div>
+        </div>
+    </div>
+</section>
