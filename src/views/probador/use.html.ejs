@@ -3,11 +3,6 @@
     <%if(prod.name!==undefined){%>
 
     <section class="main_user text-center container">
-        <a href="">
-            <div class="ligh-div flex-center">
-                <i class="far fa-lightbulb"></i>
-            </div>
-        </a><br>
 
         Has seleccionado el producto<br>
         <%=prod.name %> <br>
@@ -17,7 +12,7 @@
 
         <div class="outfit row flex-center">
             <div class="col-10">
-                <img src="https:<%=prod.fullImage%>" />
+                <img src="https:<%=prod.fullImage%>" class="img-fluid" />
             </div>
             <div class="col-2 checklist">
                 <i class="far fa-square"></i><br><br>
@@ -27,13 +22,23 @@
             </div>
         </div>
         <br> <br>
+        <div>
+            <a href="">
+                <div class="ligh-div flex-center">
+                    <i class="far fa-lightbulb"></i>
+                </div>
+            </a>
+
+            <div id="light-text">
+                Puedes cambiar la iluminación <br> de tu habitación
+            </div>
+        </div><br>
         <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
 
         <%} else {%>
         RIP
         <%}%>
-
-Se intento el SKU <%=actSKU%>
+        
     </section>
 </section>

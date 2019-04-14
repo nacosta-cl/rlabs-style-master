@@ -94,12 +94,17 @@ header {
     background: #FFAA00;
     color: white;
     justify-content: center;
-    font-size: 8vh;
-    height: 12vh;
-    width: 12vh;
+    font-size: 7vh;
+    height: 17vw;
+    width: 17vw;
     border-radius: 9px;
-    position: absolute;
-    right: 5vw;
+    display: inline-block;
+}
+
+#light-text {
+    display: inline-block;
+    text-align: left;
+    margin-left: 2vw
 }
 
 .outfit {
