@@ -147,6 +147,41 @@ mailer(app);
 
 // Routing middleware
 
+
+app.use(async (ctx, next) => {
+  try {
+    await next();
+    if (ctx.status === 404) {
+      ctx.throw(404);
+    } else if (ctx.status === 401) {
+      ctx.throw(401);
+    } else if (ctx.status === 403) {
+      ctx.throw(403);
+    } else if (ctx.status === 500) {
+      ctx.throw(500);
+    }
+  } catch (error) {
+    console.log(error.status);
+    ctx.status = error.status || 500;
+    ctx.app.emit('error', error, ctx);
+    if (ctx.status === 404) {
+      if (ctx.request.url === '/index.html') { // Compat header
+        await ctx.redirect('/');
+      } else if (ctx.request.url.match(/.*\..*/i) === null) {
+        await ctx.redirect('https://http.cat/404');
+      }
+    } else if (ctx.status === 401) {
+      await ctx.redirect('https://http.cat/401');
+    } else if (ctx.status === 403) {
+      await ctx.redirect('https://http.cat/403');
+    } else if (ctx.status === undefined) {
+      await ctx.redirect('https://http.cat/500');
+    }
+    // throw error;
+  }
+});
+
+/*
 app.use(async (ctx, next) => {
   try {
     // let middlewares handle the request, but catch possible errors thrown
@@ -167,7 +202,7 @@ app.use(async (ctx, next) => {
     // (or the default one) have the opportunity to handle it
     throw error;
   }
-});
+});*/
 
 app.use(routes.routes());
 
