@@ -10,6 +10,7 @@ Ruta para mostrar las prendas del probador en la interfaz superior de seleccion,
 */
 router.get('probadorGUIchooser', '/:probID/chooser', async(ctx) => {
     await ctx.render('probador/chooser/chooser', {
+        layout: "probador/chooser/layout",
         actID: ctx.params.probID,
     });
 });
@@ -19,6 +20,7 @@ Ruta para mantener una imagen estatica de saludo
 */
 router.get('probadorGUIchooser', '/:probID/static-chooser', async(ctx) => {
     await ctx.render('probador/chooser/staticChooser', {
+        layout: "probador/chooser/layout",
         actID: ctx.params.probID,
     });
 });
@@ -29,6 +31,7 @@ Ruta para que el usuario se lleve el listado de prendas que escogio, y pedirlas 
 
 router.get('probadorGUIretrieve', '/:probID/retrieveQR', async(ctx) => {
     await ctx.render('probador/chooser/retrieveQR', {
+        layout: "probador/chooser/layout",
         actID: ctx.params.probID,
     });
 });
@@ -49,18 +52,15 @@ router.get('probadorGUIuse', '/:probID/use', async(ctx) => {
     //how to do a request on async
 
     const requestPromise = util.promisify(request);
-    const response = await requestPromise("https://simple.ripley.cl/api/v2/products/"+ctx.query.sku+"P");
+    const response = await requestPromise("https://simple.ripley.cl/api/v2/products/"+ctx.query.sku);
 
     console.log('response', response.body);
-
 
     await ctx.render('probador/use', {
         prod: JSON.parse(response.body),
         actSKU: ctx.query.sku,
         actID: ctx.params.probID,
     });
-
-    
 });
 
 /*
