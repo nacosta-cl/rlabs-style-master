@@ -15,7 +15,6 @@ router.get('mainShower', '/mapGet', async(ctx) => {
     const succs = await ctx.orm.sucursal.findByPk(ctx.query.id);
 
     const res = await ctx.orm.prob.findAll();
-    console.log(res);
     await ctx.render('map/map', {
         succs,
         res
