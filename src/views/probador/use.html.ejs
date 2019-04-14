@@ -1,34 +1,42 @@
 <section class="main_user text-center container">
 
+    <%if(prod.name!==undefined){%>
 
-<%if(prod.name!==undefined){%>
-Has seleccionado el producto<br>
-<%=prod.name %>
-<%=prod.prices.formattedListPrice%>
-<%=prod.prices.formattedOfferPrice%>
+    <section class="main_user text-center container">
+        <a href="">
+            <div class="ligh-div flex-center">
+                <i class="far fa-lightbulb"></i>
+            </div>
+        </a><br>
 
-<section class="main_user text-center container">
-    <a href="/">
-    <div class="ligh-div flex-center">
-        <i class="far fa-lightbulb"></i>
-    </div></a><br>
-    <div class="outfit row flex-center">
-        <div class="col-10">
-            <img src="https:<%=prod.fullImage%>" />
+        Has seleccionado el producto<br>
+        <%=prod.name %> <br>
+        <%=prod.prices.listPrice%> <br>
+        <%=prod.prices.offerPrice%> <br>
+        Se intento el SKU <%=actSKU%>
+
+        <div class="outfit row flex-center">
+            <div class="col-10">
+                <img src="https:<%=prod.fullImage%>" />
+            </div>
+            <div class="col-2 checklist">
+                <i class="far fa-square"></i><br><br>
+                <i class="far fa-square"></i><br><br>
+                <i class="far fa-square"></i><br><br>
+                <i class="far fa-square"></i>
+            </div>
         </div>
-        <div class="col-2 checklist">
-            <i class="far fa-square"></i><br><br>
-            <i class="far fa-square"></i><br><br>
-            <i class="far fa-square"></i><br><br>
-            <i class="far fa-square"></i>
-        </div>
-    </div>
-    <br> <br>
-    <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
-</section>
+        <br> <br>
+        <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
-<%} else {%>
-RIP
-<%}%>
+
+        <%} else {%>
+        RIP
+        <%}%>
 
 Se intento el SKU <%=actSKU%>
+        <br>
+
+        <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
+    </section>
+</section>
