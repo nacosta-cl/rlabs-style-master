@@ -2,15 +2,15 @@
 
     <%if(prod.name!==undefined){%>
 
-    <section class="main_user text-center container">
+    <section class="main_user text-center container"><br>
         <div hidden>$<%=prod.prices.listPrice%></div> <br>
         <div hidden>SKU <%=actSKU%></div>
         <h4>Has seleccionado el producto<br>
         <%=prod.name %></h4>
 
         <div class="outfit row flex-center">
-            <div class="col-9">
-                <img src="https:<%=prod.fullImage%>" class="img-fluid" />
+            <div class="col-9 weaita-c">
+                <img src="https:<%=prod.fullImage%>" class="weiata" />
             </div>
             <div class="col-3 checklist">
                 <img src="/assets/img/tshirt.svg"> <i id="shirt" class="far fa-square"></i><br><br>
@@ -19,15 +19,18 @@
                 <img src="/assets/img/watch.svg"> <i id="watch" class="far fa-square"></i>
             </div>
         </div>
-        <br> <br><a href="">
+        <br> <br>
             <div class="flex-center">
-
-                <img src="/assets/img/luz.png" alt="bulb" class="light">
                 <div id="light-text">
-                    Puedes cambiar la iluminación de tu habitación
+                    Puedes cambiar la iluminación de tu habitación <br>
+                    <div class="center-item flex-center ambients">
+                            <img src="/assets/img/dia.png" alt="sun">
+                            <img src="/assets/img/noche.png" alt="sun">
+                            <img src="/assets/img/shuffle.png" alt="sun">
+                        </div>
                 </div>
             </div>
-        </a><br><br>
+        <br><br>
         
         <a href="/probador/<%=actID%>/end"><button id="finish" class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
