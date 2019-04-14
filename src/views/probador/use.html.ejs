@@ -1,7 +1,7 @@
+<section class="main_user text-center container">
 
-Has seleccionado<br>
 
-
+<<<<<<< HEAD
 <%if(prod.name!==undefined){%>
 Has seleccionado el producto<br>
 <%=prod.name %>
@@ -15,6 +15,19 @@ Has seleccionado el producto<br>
     <div class="ligh-div flex-center">
         <i class="far fa-lightbulb"></i>
     </div></a><br>
+=======
+    <a href="">
+        <div class="ligh-div flex-center">
+            <i class="far fa-lightbulb"></i>
+        </div>
+    </a><br>
+    Has seleccionado el producto<br>
+    <%=prod %>
+    <%=prod.name %>
+    <%=prod.prices.listPrice%>
+    <%=prod.prices.offerPrice%>
+    Se intento el SKU <%=actSKU%>
+>>>>>>> 41c5e2983e11cf9b3419007969c85a6e6705d33f
     <div class="outfit row flex-center">
         <div class="col-10">
                 <img src="https:<%=prod.fullImage%>"/>
@@ -36,6 +49,5 @@ Has seleccionado el producto<br>
 
 Se intento el SKU <%=actSKU%>
 <br>
-Ambiente
 
-<a href="/probador/<%=actID%>/end">finalizar</a>
+<a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>

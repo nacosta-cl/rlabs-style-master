@@ -21,16 +21,19 @@ module.exports = {
       "Mall Plaza Egaña"
     ];
     var p = [];
-    places.forEach(element => {
+    for (let i = 0; i < places.length; i += 1) {
       p.push(
         {
-          name: element,
+          name: places[i],
           region: 'RM',
-          address: element,
-          mapSrc: "map1.jpg,map2.jpg,map.jpg"
+          address: places[i],
+          mapSrc: "map1.jpg,map2.jpg,map.jpg",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         }
       )
-    });
+    }
+    
     return queryInterface.bulkInsert('sucursals',p);
     /*
       Add altering commands here.
