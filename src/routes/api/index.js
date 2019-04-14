@@ -104,4 +104,14 @@ router.get("/getst", async (ctx, next)=>{
     ctx.response.body = {selSet};
     return ctx.status = 200;
 });
+
+router.get("/mood", async (ctx, next)=>{
+    const mood = await ctx.orm.mood.findByPk(1);
+    if(ctx.query.set!==undefined){
+        mood.status = ctx.request.query.set;
+        await mood.save();
+    }
+    ctx.response.body = mood.status;
+});
+
 module.exports = router;
