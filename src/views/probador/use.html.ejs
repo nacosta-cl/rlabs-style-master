@@ -11,9 +11,8 @@
 
         Has seleccionado el producto<br>
         <%=prod.name %> <br>
-        <%=prod.prices.listPrice%> <br>
-        <%=prod.prices.offerPrice%> <br>
-        Se intento el SKU <%=actSKU%>
+        <div hidden>$<%=prod.prices.listPrice%></div> <br>
+        <div hidden>SKU <%=actSKU%></div>
 
         <div class="outfit row flex-center">
             <div class="col-10">
@@ -33,7 +32,5 @@
         <%} else {%>
         RIP
         <%}%>
-
-Se intento el SKU <%=actSKU%>
     </section>
 </section>
