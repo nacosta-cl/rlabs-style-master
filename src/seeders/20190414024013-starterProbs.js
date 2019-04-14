@@ -18,6 +18,7 @@ module.exports = {
       alive: true,
       available: true,
       type: 'F',
+      activeMainSKU: 0,
       createdAt: new Date(),
       updatedAt: new Date(),
     });
