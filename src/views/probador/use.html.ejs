@@ -2,7 +2,12 @@
 Has seleccionado<br>
 
 
-<div><img src="https:<%=prod.fullImage%>"/></div>
+<%if(prod.name!==undefined){%>
+    
+    Has seleccionado el producto<br>
+    <%=prod.name %>
+    <%=prod.prices.formattedListPrice%>
+    <%=prod.prices.formattedOfferPrice%>
 
 <section class="main_user text-center container">
 
@@ -13,7 +18,7 @@ Has seleccionado<br>
     </div></a><br>
     <div class="outfit row flex-center">
         <div class="col-10">
-            <img src="/assets/img/polera1.jpg" class="item">
+                <img src="https:<%=prod.fullImage%>"/>
         </div>
         <div class="col-2 checklist">
             <i class="far fa-square"></i><br><br>
@@ -26,13 +31,6 @@ Has seleccionado<br>
     <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 </section>
 
-<%if(prod.name!==undefined){%>
-Has seleccionado el producto<br>
-<%=prod %>
-
-<%=prod.name %>
-<%=prod.prices.formattedListPrice%>
-<%=prod.prices.formattedOfferPrice%>
 <%} else {%>
     RIP
 <%}%>
