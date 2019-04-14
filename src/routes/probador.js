@@ -9,12 +9,8 @@ const request = require('request');
 /*
 Ruta para mostrar las prendas del probador en la interfaz superior de seleccion, donde se muestren las recomendaciones
 */
-<<<<<<< HEAD
 router.get('probadorGUIchooser', '/:probID/chooser', async(ctx) => {
     const prob = ctx.orm.prob.findByPk(ctx.params.probID);
-=======
-router.get('probadorGUIchooser', '/:probID/chooser', async (ctx) => {
->>>>>>> f84d263ebdbc87b1a7a58ff8d642542d5bea8e5b
     await ctx.render('probador/chooser/chooser', {
         layout: "probador/chooser/layout",
         actID: ctx.params.probID,
