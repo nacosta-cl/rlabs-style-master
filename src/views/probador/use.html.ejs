@@ -14,7 +14,7 @@
     Se intento el SKU <%=actSKU%>
     <div class="outfit row flex-center">
         <div class="col-10">
-            <img src="/assets/img/polera1.jpg" class="item">
+                <img src="https:<%=prod.fullImage%>"/>
         </div>
         <div class="col-2 checklist">
             <i class="far fa-square"></i><br><br>
@@ -26,3 +26,12 @@
     <br> <br>
     <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
 </section>
+
+<%} else {%>
+    RIP
+<%}%>
+
+Se intento el SKU <%=actSKU%>
+<br>
+
+<a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
