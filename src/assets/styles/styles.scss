@@ -99,10 +99,7 @@ header {
 }
 
 #light-text {
-    display: inline-block;
-    text-align: left;
-    margin-left: 2vw;
-    max-width: 50%;
+    text-align: center;
     font-size: 25px
 }
 
@@ -150,6 +147,20 @@ header {
 
 #arrow2 {
     color: #C2000A
+}
+
+.weaita-c img{
+    max-height: 50vh;
+    width: 100%
+}
+
+.main_user {
+    min-height: 96vh
+}
+
+.ambients img{
+    width: 25%;
+    margin: 1.25%;
 }
 
 .U,
