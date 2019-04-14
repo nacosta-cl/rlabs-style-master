@@ -1,11 +1,16 @@
-Has seleccionado el producto<br>
-<%=prod %>
+Has seleccionado<br>
+
+<%if(prod.name!==undefined){%>
+<div><img src="https:<%=prod.fullImage%>"/></div>
+
 <%=prod.name %>
-<%=prod.prices.listPrice%>
-<%=prod.prices.offerPrice%>
+<%=prod.prices.formattedListPrice%>
+<%=prod.prices.formattedOfferPrice%>
+<%} else {%>
+    RIP
+<%}%>
+
 Se intento el SKU <%=actSKU%>
-
+<br>
 Ambiente
-
-Aqui puedo generar los qr necesarios
 <a href="/probador/<%=actID%>/end">finalizar</a>
