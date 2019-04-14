@@ -12,8 +12,6 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-
-
     var data = [];
     data.push({
       sucursalID: 0,
@@ -24,7 +22,6 @@ module.exports = {
       updatedAt: new Date(),
     });
     return queryInterface.bulkInsert('probs', data, {});
-
   },
 
   down: (queryInterface, Sequelize) => {
