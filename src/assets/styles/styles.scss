@@ -88,7 +88,9 @@ header {
 .checklist {
     font-size: 4.5vw;
     justify-content: center;
-    img, path {
+
+    img,
+    path {
         width: 50%
     }
 }
@@ -116,13 +118,35 @@ header {
     padding: 0 3vw
 }
 
-.clothes-showcase .b {
-    height: 45vh;
-    padding: 0 5px;
+.clothes-showcase {
+    .b {
+        height: 45vh;
+        padding: 0 5px;
+    }
+
+    .c {
+        height: 100%;
+    }
 
     img {
-        width: 90%
+        max-width: 90%;
+        max-height: 65%;
     }
+}
+
+.chooser .z {
+    height: 37px;
+    color: #fff;
+    position: absolute;
+    left: 8%;
+}
+
+.white {
+    color: #fff
+}
+
+.red {
+    color: #C2000A
 }
 
 .print {
@@ -130,6 +154,7 @@ header {
     width: 35%;
     padding: 3vh;
     border-radius: 7px;
+
     .fa-print {
         font-size: 7vh;
         color: white
@@ -149,9 +174,10 @@ header {
     color: #C2000A
 }
 
-.weaita-c img{
-    max-height: 50vh;
-    width: 100%
+.weaita-c img {
+    min-height: 60vw;
+    height: 50vh;
+    max-width: 100%
 }
 
 .main_user {
@@ -162,7 +188,7 @@ header {
     color: rgb(6, 146, 6)
 }
 
-.ambients img{
+.ambients img {
     width: 25%;
     margin: 1.25%;
 }
@@ -183,8 +209,8 @@ header {
     bottom: 0
 }
 
-.qrscanner video{
-   
+.qrscanner video {
+
     min-width: 45vw;
     width: 45vh;
     height: auto;
