@@ -14,7 +14,7 @@ router.get('userAction', '/', async(ctx) => {
 
 router.get('userCalledSeller', '/calledSeller', async(ctx) => {
     const setBuy = ctx.query.set;
-    
+
     await ctx.render('userAction/calledSeller', {
         setBuy: setBuy
     });
@@ -30,7 +30,6 @@ router.get('userCalledList', '/listSKUs', async(ctx) => {
 });
 router.get('userQR', '/qr', async(ctx) => {
     await ctx.render('userAction/qrScanner', {
-        setBuy: setBuy,
         actID: ctx.params.probID,
     });
 });
