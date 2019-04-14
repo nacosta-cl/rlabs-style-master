@@ -12,6 +12,16 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    var data = [];
+    data.push({
+      sucursalID: 0,
+      alive: true,
+      available: true,
+      type: 'F',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    return queryInterface.bulkInsert('probs', data, {});
   },
 
   down: (queryInterface, Sequelize) => {

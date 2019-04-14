@@ -34,7 +34,7 @@ module.exports = {
       )
     }
     
-    return queryInterface.bulkInsert('sucursals',p);
+    return queryInterface.bulkInsert('sucursals',p,{});
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
