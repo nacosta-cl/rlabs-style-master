@@ -1,6 +1,12 @@
-Aqui se inicia la interfaz local del probador
-
-<form action="/probador/<%=actID%>/use" method="GET">
-    <input autofocus type="text" name="sku" placeholder="SKU"/>
-    <input type="submit" value="Enviar SKU"/>
-</form>
+<section class="satandby">
+    <div class="container">
+        <br><br>
+        <h1 class="text-center nani"><b>ESCANEE LA ETIQUETA DE SU PRENDA</b></h1><br><br>
+    </div>
+    <div class="center-item flex-center">
+        <i class="fas fa-angle-double-down"></i>
+    </div>
+    <form  class="text-center" action="/probador/<%=actID%>/use" method="GET">
+        <input id="sku" onblur="this.focus()" autofocus type="text" name="sku" placeholder="SKU" />
+    </form>
+</section>
