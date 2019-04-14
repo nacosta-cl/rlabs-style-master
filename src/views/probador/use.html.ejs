@@ -1,6 +1,7 @@
 <section class="main_user text-center container">
 
 
+<<<<<<< HEAD
 <%if(prod.name!==undefined){%>
 Has seleccionado el producto<br>
 <%=prod.name %>
@@ -12,9 +13,22 @@ Has seleccionado el producto<br>
     <div class="ligh-div flex-center">
         <i class="far fa-lightbulb"></i>
     </div></a><br>
+=======
+    <a href="">
+        <div class="ligh-div flex-center">
+            <i class="far fa-lightbulb"></i>
+        </div>
+    </a><br>
+    Has seleccionado el producto<br>
+    <%=prod %>
+    <%=prod.name %>
+    <%=prod.prices.listPrice%>
+    <%=prod.prices.offerPrice%>
+    Se intento el SKU <%=actSKU%>
+>>>>>>> a135996c8d4f7dd2e3065bdbde5e2b51f7a8dba1
     <div class="outfit row flex-center">
         <div class="col-10">
-                <img src="https:<%=prod.fullImage%>"/>
+            <img src="https:<%=prod.fullImage%>" />
         </div>
         <div class="col-2 checklist">
             <i class="far fa-square"></i><br><br>
@@ -28,7 +42,7 @@ Has seleccionado el producto<br>
 </section>
 
 <%} else {%>
-    RIP
+RIP
 <%}%>
 
 Se intento el SKU <%=actSKU%>
