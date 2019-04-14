@@ -6,7 +6,11 @@ const router = new KoaRouter();
 router.post('interpretQR','/readQR', async(ctx)=>{
     
 })
-
+router.get('userAction', '/', async(ctx) => {
+    await ctx.render('index', {
+        
+    });
+});
 
 router.get('userCalledSeller', '/calledSeller', async(ctx) => {
     await ctx.render('userAction/calledSeller', {
