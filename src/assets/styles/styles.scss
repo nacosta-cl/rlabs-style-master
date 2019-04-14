@@ -37,7 +37,6 @@ header {
 }
 
 .guia {
-    background: #E5E7E9;
     padding: 20px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -140,11 +139,23 @@ header {
     }
 }
 
+.arrow {
+    font-size: 30px;
+    float: right
+}
+
+#arrow1 {
+    color: #49247A
+}
+
+#arrow2 {
+    color: #C2000A
+}
 
 .U,
 .D {
     width: 96%;
-    font-size: 20px
+    font-size: 30px
 }
 
 .U {
@@ -159,14 +170,29 @@ header {
 
 .qrscanner video{
    
-    min-width: 50vw;
-    width: 55vh;
+    min-width: 45vw;
+    width: 45vh;
     height: auto;
 }
 
 #scannedTextMemo {
     min-width: 40vw;
     width: 40vh
+}
+
+#buscador-flexdatalist {
+    width: 80%;
+    display: inline-block;
+    float: left;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0
+}
+
+#btnbuscador {
+    width: 20%;
+    display: inline-block;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
 }
 
 footer.footer {
