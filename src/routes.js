@@ -6,11 +6,13 @@ const contact = require('./routes/contact');
 const users = require('./routes/users');
 const session = require('./routes/session');
 const probador = require('./routes/probador');
+const userAction = require('./routes/userAction');
 const map = require('./routes/map');
 const router = new KoaRouter();
 
 router.use('/', index.routes());
 router.use('/resources', resources.routes());
+router.use('/userAction', userAction.routes());
 router.use('/map', map.routes());
 router.use('/probador', probador.routes());
 router.use('/contact', contact.routes());

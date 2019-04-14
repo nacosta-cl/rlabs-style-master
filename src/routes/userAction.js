@@ -6,7 +6,11 @@ const router = new KoaRouter();
 router.post('interpretQR','/readQR', async(ctx)=>{
     
 })
-
+router.get('userAction', '/', async(ctx) => {
+    await ctx.render('index', {
+        
+    });
+});
 
 router.get('userCalledSeller', '/calledSeller', async(ctx) => {
     await ctx.render('userAction/calledSeller', {
@@ -21,7 +25,7 @@ router.get('userCalledList', '/listSKUs', async(ctx) => {
         SKUlist: skuresults,
     });
 });
-router.get('userQR', '/:probID', async(ctx) => {
+router.get('userQR', '/qr', async(ctx) => {
     await ctx.render('userAction/qrScanner', {
         actID: ctx.params.probID,
     });

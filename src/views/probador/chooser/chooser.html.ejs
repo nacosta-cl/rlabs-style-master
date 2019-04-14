@@ -1,3 +1,39 @@
+<div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+    const refreshTime = 100000;
+    const mainFunc = function(){
+        var xmlhttp = new XMLHttpRequest();
+        var url = "/api/set?pr=" + <%=actID%> ;
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+    setInterval(mainFunc, refreshTime)
+
+
+
+
+
+</script>
+
+
+
 Seleccionador de prendas que combinen dado un SKU: Multiples opciones pre sugeridas por un diseñador
 IA
 
