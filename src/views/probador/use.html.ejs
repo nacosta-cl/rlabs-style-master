@@ -3,12 +3,10 @@
     <%if(prod.name!==undefined){%>
 
     <section class="main_user text-center container">
-
-        Has seleccionado el producto<br>
-        <%=prod.name %> <br>
-        <%=prod.prices.listPrice%> <br>
-        <%=prod.prices.offerPrice%> <br>
-        Se intento el SKU <%=actSKU%>
+        <div hidden>$<%=prod.prices.listPrice%></div> <br>
+        <div hidden>SKU <%=actSKU%></div>
+        <h4>Has seleccionado el producto<br>
+        <%=prod.name %></h4>
 
         <div class="outfit row flex-center">
             <div class="col-9">
@@ -29,13 +27,12 @@
                     Puedes cambiar la iluminación de tu habitación
                 </div>
             </div>
-        </a><br>
-        <a href="/probador/<%=actID%>/end"><button class="btn btn-purple btn-lg">FINALIZAR</button></a>
+        </a><br><br>
+        <a href="/probador/<%=actID%>/end"><button id="finish" class="btn btn-purple btn-lg">FINALIZAR</button></a>
 
 
         <%} else {%>
         RIP
         <%}%>
-        
     </section>
 </section>
