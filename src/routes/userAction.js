@@ -21,7 +21,7 @@ router.get('userCalledList', '/listSKUs', async(ctx) => {
         SKUlist: skuresults,
     });
 });
-router.get('userQR', '/:probID', async(ctx) => {
+router.get('userQR', '/qr', async(ctx) => {
     await ctx.render('userAction/qrScanner', {
         actID: ctx.params.probID,
     });

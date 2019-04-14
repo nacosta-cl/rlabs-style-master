@@ -1,6 +1,8 @@
 const KoaRouter = require('koa-router');
 const pkg = require('../../package.json');
 
+const util = require('util');
+
 const router = new KoaRouter();
 
 /*
@@ -41,11 +43,24 @@ router.get('probadorGUIuse', '/:probID/end', async(ctx) => {
 /*
 Ruta para seleccionar el ambiente de prueba, y si el usuario quiere continuar
 */
+const request = require('request');
+
 router.get('probadorGUIuse', '/:probID/use', async(ctx) => {
+    //how to do a request on async
+
+    const requestPromise = util.promisify(request);
+    const response = await requestPromise("https://simple.ripley.cl/api/v2/products/"+ctx.query.sku+"P");
+
+    console.log('response', response.body);
+
+
     await ctx.render('probador/use', {
+        prod: JSON.parse(response.body),
         actSKU: ctx.query.sku,
         actID: ctx.params.probID,
     });
+
+    
 });
 
 /*

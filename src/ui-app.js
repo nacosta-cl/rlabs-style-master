@@ -181,29 +181,6 @@ app.use(async (ctx, next) => {
   }
 });
 
-/*
-app.use(async (ctx, next) => {
-  try {
-    // let middlewares handle the request, but catch possible errors thrown
-    await next();
-  } catch (error) {
-    // we'll only handle Not found HTTP errors in this case
-    if (error.name === 'NotFoundError') {
-      // and we'll use a custom template instead of default handling
-      await ctx.render('errors/404', {
-        title: error.message,
-        details: `El recurso de id ${error.id} no fue encontrado`,
-      });
-      // if we'll handle the error we should emit the 'error' event so a handling of that
-      // (usually for logging purposes) can also know about this error
-      ctx.app.emit('error', error, ctx);
-    }
-    // if it's an error we are not handling we need to throw it so next handlers
-    // (or the default one) have the opportunity to handle it
-    throw error;
-  }
-});*/
-
 app.use(routes.routes());
 
 module.exports = app;
