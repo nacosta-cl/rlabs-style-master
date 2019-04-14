@@ -13,15 +13,18 @@ router.get('userAction', '/', async(ctx) => {
 });
 
 router.get('userCalledSeller', '/calledSeller', async(ctx) => {
+    const setBuy = ctx.query.set;
+
     await ctx.render('userAction/calledSeller', {
-        
+        setBuy: setBuy
     });
 });
 router.get('userCalledList', '/listSKUs', async(ctx) => {
     //Retrieve list from DB or API
-    const list = ctx.params.listID;
+    const setBuy = ctx.query.set;
     const skuresults = undefined;
     await ctx.render('userAction/listSKUs', {
+        setBuy: setBuy,
         SKUlist: skuresults,
     });
 });
