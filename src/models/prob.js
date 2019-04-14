@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     sucursalID: DataTypes.INTEGER,
     alive: DataTypes.BOOLEAN,
     available: DataTypes.BOOLEAN,
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    activeMainSKU: DataTypes.STRING,
   }, {});
   prob.associate = function(models) {
     // associations can be defined here

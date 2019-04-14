@@ -10,9 +10,11 @@ const request = require('request');
 Ruta para mostrar las prendas del probador en la interfaz superior de seleccion, donde se muestren las recomendaciones
 */
 router.get('probadorGUIchooser', '/:probID/chooser', async(ctx) => {
+    const prob = ctx.orm.prob.findByPk(ctx.params.probID);
     await ctx.render('probador/chooser/chooser', {
         layout: "probador/chooser/layout",
         actID: ctx.params.probID,
+        activeSet: prob.activeMainSKU
     });
 });
 /*
@@ -55,9 +57,9 @@ router.get('probadorGUIuse', '/:probID/use', async(ctx) => {
     //how to do a request on async
     const requestPromise = util.promisify(request);
     const response = await requestPromise("https://simple.ripley.cl/api/v2/products/"+ctx.query.sku);
-
-    console.log('response', response.body);
-
+    const prob = await ctx.orm.prob.findByPk(1);
+    prob.activeMainSKU = ctx.query.sku;
+    await prob.save();
     await ctx.render('probador/use', {
         prod: JSON.parse(response.body),
         actSKU: ctx.query.sku,

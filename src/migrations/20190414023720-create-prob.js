@@ -20,6 +20,9 @@ module.exports = {
       type: {
         type: Sequelize.STRING
       },
+      activeMainSKU: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

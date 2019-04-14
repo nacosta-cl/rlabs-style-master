@@ -1,50 +1,98 @@
-<script>
-    const refreshTime = 100000;
-    const mainFunc = function () {
-        var xmlhttp = new XMLHttpRequest();
-        var url = "/api/set?pr=" + <%=actID%>;
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                var myArr = JSON.parse(this.responseText);
-                myFunction(myArr);
-            }
-        };
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-    }
-    setInterval(mainFunc, refreshTime)
-</script>
+
 <section class="flex-center main2">
     <div class="container">
         <div class="row clothes-showcase">
             <div class="col-3 text-center flex-center b">
                 <button class="btn btn-grey U"><b>.</b></button>
                 <div>
-                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                    <img id="cato1" src="/assets/img/catto.png" class="img-fluid">
                 </div>
                 <button class="btn btn-grey D"><b>.</b></button>
             </div>
             <div class="col-3 text-center flex-center b">
                 <button class="btn btn-purple U"><b><i class="fas fa-chevron-up"></i></b></button>
                 <div>
-                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                    <img id="cato2" src="/assets/img/catto.png" class="img-fluid">
                 </div>
                 <button class="btn btn-purple D"><b><i class="fas fa-chevron-down"></i></b></button>
             </div>
             <div class="col-3 text-center flex-center b">
                 <button class="btn btn-wine U"><b><i class="fas fa-chevron-up"></i></b></button>
                 <div>
-                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                    <img id="cato3" src="/assets/img/catto.png" class="img-fluid">
                 </div>
                 <button class="btn btn-wine D"><b><i class="fas fa-chevron-down"></i></b></button>
             </div>
             <div class="col-3 text-center flex-center b">
                 <button class="btn btn-yellow U"><b><i class="fas fa-chevron-up"></i></b></button>
                 <div>
-                    <img id="cato" src="/assets/img/catto.png" class="img-fluid">
+                    <img id="cato4" src="/assets/img/catto.png" class="img-fluid">
                 </div>
                 <button class="btn btn-yellow D"><b><i class="fas fa-chevron-down"></i></b></button>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    const refreshTime = 5000;
+    var setNum = 0;
+    var activeSKU = "";
+    var allData = "";           
+    const mainFunc = function () {
+        var xmlhttp = new XMLHttpRequest();
+        var url = "/api/getst?setID=" + setNum;//<%=actID%>;
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                console.log("kk")
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+    //Only once
+    var http = new XMLHttpRequest();
+    var url = '/api/createSet';
+    var params = '';
+   
+    http.open('POST', url, true);
+    
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            let rsp = JSON.parse(http.responseText);
+            console.log(rsp)
+            setNum = rsp.newSet;
+            activeSKU = rsp.activeMainSKU
+            
+
+            var http2 = new XMLHttpRequest();
+            var url2 = '/api/smartSet';
+            let params2 = {
+                "startSKU": rsp.activeSKU,
+                "set":setNum
+            };
+            console.log(params2)
+            http2.open('POST', url2, true);
+            http2.send(JSON.stringify(params2));
+            http2.onreadystatechange = function() {
+                if(http2.readyState == 4 && http2.status == 200) {
+                    allData = http2.responseText;
+                    let data = JSON.parse(allData);
+                    document.getElementById("cato1").src=data.sel1.fullImage
+                    
+                    document.getElementById("cato2").src=data.sel2.fullImage
+                    document.getElementById("cato3").src=data.sel3.fullImage
+                    document.getElementById("cato4").src=data.sel4.fullImage
+                    console.log("done build")
+                    
+                    console.log(allData);
+                }
+            }
+            //cal
+        }
+    }
+    http.send();
+    setInterval(mainFunc, refreshTime);
+
+</script>
